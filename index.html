@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Grace Joy Ancona</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="fade-in">
+      <div class="container about-section">
+        <div class="about-text">
+          <h2>ABOUT ME </h2>
+          <p>I AM A CYBER SECURITY HACK THE THREAT BEFORE IT HACKS YOU.</p>
+        </div>
+        <div class="profile-image">
+          <img src="me.jpg" alt="John Doe" />
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <div class="container">
+        <h2>SKILLS</h2>
+        <div class="project">
+          <img src="Digital-Signature-Cryptography-2.webp" alt="Project One Screenshot" />
+          <div>
+            <h3>Knowledge of encryption, hashing, digital signatures</h3>
+            <p>Every second counts in a cyber incident. I create and execute precise incident response plans to minimize damage and restore control. With a proactive mindset and structured approach, I turn uncertainty into resilience.</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="Creating and following incident response plans (IRPs).jpeg" alt="Project Two Screenshot" />
+          <div>
+            <h3>Creating and following incident response plans (IRPs)</h3>
+            <p>I am a cybersecurity professional with a focus on creating and executing effective Incident Response Plans (IRPs). My mission is clear: hack the threat before it hacks you. I specialize in building structured, actionable IRPs that enable organizations to respond swiftly and decisively to security incidents. From identifying vulnerabilities to coordinating containment and recovery efforts, I ensure that every phase of the response is executed with precision. With a proactive mindset and a commitment to resilience, I help transform unexpected threats into manageable, controlled outcomes</p>
+          </div>
+        </div>
+      </div>
+      </section>
+      <div class="container">
+        <h2>SERVICES</h2>
+        <div class="project">
+          <div>
+            <h3>>Identify vulnerabilities in systems, networks, and applications</p>
+            <h3>>Simulate real-world attacks to test system defenses</p>
+            <h3>>Identify exploitable weaknesses before hackers do</p>
+            <h3>>Deliver actionable insights to harden infrastructure</p>
+          </div>
+        </div
+
+    <section id="contact" class="fade-in">
+      <div class="container">
+        <h2>CONTACT</h2>
+        <p>Email: gracejoyancona@gmail.com</p>
+        <p>PHONE: <a href="#">09095921108</a></p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 gracejoyancona. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
